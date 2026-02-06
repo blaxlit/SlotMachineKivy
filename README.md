@@ -6,3 +6,6 @@ This is a Kivy application assignment project.
 ## Project Info
 - Due Date: 15 Feb 2026
 - Target: 30 Widgets, 10 Callbacks
+## Tools
+- Language: Python 3
+- Framework: Kivy
