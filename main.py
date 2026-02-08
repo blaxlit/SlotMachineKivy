@@ -5,7 +5,12 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.image import Image
 
 class SlotGame(BoxLayout):
-    pass
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.orientation = 'vertical' 
+
+        self.grid = GridLayout(cols=3, padding=20, spacing=10)
+        self.add_widget(self.grid)
 
 class SlotApp(App):
     def build(self):
