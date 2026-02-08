@@ -11,6 +11,11 @@ class SlotGame(BoxLayout):
 
         self.grid = GridLayout(cols=3, padding=20, spacing=10)
         self.add_widget(self.grid)
+        self.slot_ids = [] 
+        for i in range(9):
+            img = Image(source='1.png') 
+            self.slot_ids.append(img)
+            self.grid.add_widget(img)
 
 class SlotApp(App):
     def build(self):
