@@ -17,6 +17,8 @@ class SlotGame(BoxLayout):
             img = Image(source='1.png') 
             self.slot_ids.append(img)
             self.grid.add_widget(img)
+            self.score_board = BoxLayout(size_hint_y=0.2)
+            self.add_widget(self.score_board)
 
 class SlotApp(App):
     def build(self):
