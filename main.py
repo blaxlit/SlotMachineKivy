@@ -13,18 +13,20 @@ class SlotGame(BoxLayout):
         self.grid = GridLayout(cols=3, padding=20, spacing=10)
         self.add_widget(self.grid)
         self.slot_ids = [] 
+
         for i in range(9):
             img = Image(source='1.png') 
             self.slot_ids.append(img)
             self.grid.add_widget(img)
-            self.score_board = BoxLayout(size_hint_y=0.2)
-            self.add_widget(self.score_board)
+            
+        self.score_board = BoxLayout(size_hint_y=0.2)
+        self.add_widget(self.score_board)
 
-            self.money_label = Label(text="Money: 1000", font_size=30)
-            self.score_board.add_widget(self.money_label)
+        self.money_label = Label(text="Money: 1000", font_size=30)
+        self.score_board.add_widget(self.money_label)
         
-            self.bet_label = Label(text="Bet: 10", font_size=30)
-            self.score_board.add_widget(self.bet_label)
+        self.bet_label = Label(text="Bet: 10", font_size=30)
+        self.score_board.add_widget(self.bet_label)
 
 class SlotApp(App):
     def build(self):
