@@ -20,6 +20,12 @@ class SlotGame(BoxLayout):
             self.score_board = BoxLayout(size_hint_y=0.2)
             self.add_widget(self.score_board)
 
+            self.money_label = Label(text="Money: 1000", font_size=30)
+            self.score_board.add_widget(self.money_label)
+        
+            self.bet_label = Label(text="Bet: 10", font_size=30)
+            self.score_board.add_widget(self.bet_label)
+
 class SlotApp(App):
     def build(self):
         return SlotGame()
