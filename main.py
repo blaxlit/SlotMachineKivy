@@ -27,6 +27,8 @@ class SlotGame(BoxLayout):
         
         self.bet_label = Label(text="Bet: 10", font_size=30)
         self.score_board.add_widget(self.bet_label)
+        button_box = BoxLayout() 
+        self.add_widget(button_box)
 
 class SlotApp(App):
     def build(self):
