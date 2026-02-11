@@ -37,6 +37,9 @@ class SlotGame(BoxLayout):
         
         self.reset_btn = Button(text="RESET")
         button_box.add_widget(self.reset_btn)
+    def spin(self, instance):
+        print("Spinning...")
+        self.money_label.text = "Spinning..."
 
 class SlotApp(App):
     def build(self):
