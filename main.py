@@ -28,7 +28,7 @@ class SlotGame(BoxLayout):
         self.bet_label = Label(text="Bet: 10", font_size=30)
         self.score_board.add_widget(self.bet_label)
         
-        button_box = BoxLayout() 
+        button_box = BoxLayout(size_hint_y=0.2, padding=10, spacing=10) 
         self.add_widget(button_box)
         
         self.spin_btn = Button(text="SPIN!", background_color=(1,0,0,1))
