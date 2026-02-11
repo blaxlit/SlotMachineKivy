@@ -34,6 +34,8 @@ class SlotGame(BoxLayout):
         
         self.spin_btn = Button(text="SPIN!", background_color=(1,0,0,1))
         button_box.add_widget(self.spin_btn)
+
+        self.spin_btn.bind(on_press=self.spin)
         
         self.reset_btn = Button(text="RESET")
         button_box.add_widget(self.reset_btn)
