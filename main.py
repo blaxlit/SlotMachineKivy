@@ -39,9 +39,9 @@ class SlotGame(BoxLayout):
         
         self.reset_btn = Button(text="RESET")
         button_box.add_widget(self.reset_btn)
+        
     def spin(self, instance):
         print("Spinning...")
-        
         for img in self.slot_ids:
             number = random.randint(1, 3)
             img.source = f"{number}.png"
