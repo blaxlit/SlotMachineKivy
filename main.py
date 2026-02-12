@@ -41,6 +41,11 @@ class SlotGame(BoxLayout):
         button_box.add_widget(self.reset_btn)
     def spin(self, instance):
         print("Spinning...")
+        
+        for img in self.slot_ids:
+            number = random.randint(1, 3)
+            img.source = f"{number}.png"
+
         self.money_label.text = "Spinning..."
 
 class SlotApp(App):
