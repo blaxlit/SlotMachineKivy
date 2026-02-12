@@ -4,7 +4,7 @@ from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.image import Image
 from kivy.uix.label import Label
-from kivy.uix.label import random
+import random
 
 class SlotGame(BoxLayout):
     def __init__(self, **kwargs):
