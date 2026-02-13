@@ -47,7 +47,7 @@ class SlotGame(BoxLayout):
             number = random.randint(1, 3)
             img.source = f"{number}.png"
 
-        self.money_label.text = "Spinning..."
+        self.check_win()
     
     def check_win(self):
         s1 = self.slot_ids[3].source
