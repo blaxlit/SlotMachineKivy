@@ -48,6 +48,20 @@ class SlotGame(BoxLayout):
             img.source = f"{number}.png"
 
         self.money_label.text = "Spinning..."
+    
+    def check_win(self):
+        s1 = self.slot_ids[3].source
+        s2 = self.slot_ids[4].source
+        s3 = self.slot_ids[5].source
+
+        if s1 == s2 == s3:
+            self.credit += 100
+            self.money_label.text = f"Money: {self.credit} (WIN!)"
+            self.money_label.color = (0, 1, 0, 1) 
+        else:
+            self.credit -= 10
+            self.money_label.text = f"Money: {self.credit}"
+            self.money_label.color = (1, 1, 1, 1)
 
 class SlotApp(App):
     def build(self):
