@@ -13,4 +13,5 @@ This is a Kivy application assignment project.
 1. Press **SPIN!** to start the game.
 2. Match 3 images to WIN!
 3. If you run out of money, press **+1000**.
-4. Press **EXIT** to close the game.
+4. Press **RESET** to reset game.
+5. Press **EXIT** to close the game.
