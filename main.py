@@ -21,6 +21,7 @@ class SlotGame(BoxLayout):
             self.slot_ids.append(img)
             self.grid.add_widget(img)
             
+
         self.score_board = BoxLayout(size_hint_y=0.2)
         self.add_widget(self.score_board)
 
@@ -30,29 +31,35 @@ class SlotGame(BoxLayout):
         self.bet_label = Label(text="Bet: 10", font_size=30)
         self.score_board.add_widget(self.bet_label)
         
+
         button_box = BoxLayout(size_hint_y=0.2, padding=10, spacing=10) 
         self.add_widget(button_box)
         
+
         self.spin_btn = Button(text="SPIN!", background_color=(1,0,0,1))
         button_box.add_widget(self.spin_btn)
-        self.cheat_btn.bind(on_press=self.add_money)
+        self.spin_btn.bind(on_press=self.spin)
+
 
         self.cheat_btn = Button(text="+1000", background_color=(0, 1, 0, 1))
         button_box.add_widget(self.cheat_btn)
         self.cheat_btn.bind(on_press=self.add_money)
-        def exit_game(self, instance):
-            App.get_running_app().stop()
         
+
         self.reset_btn = Button(text="RESET")
         button_box.add_widget(self.reset_btn)
-        self.status_label = Label(text="Status: Ready", font_size=20)
-        self.add_widget(self.status_label)
+
+
         self.exit_btn = Button(text="EXIT", background_color=(0.5, 0.5, 0.5, 1))
         button_box.add_widget(self.exit_btn)
         self.exit_btn.bind(on_press=self.exit_game)
+
+
+        self.status_label = Label(text="Status: Ready", font_size=20)
+        self.add_widget(self.status_label)
         
     def spin(self, instance):
-        print("Spinning...")
+        self.status_label.text = "Status: Spinning..."
         for img in self.slot_ids:
             number = random.randint(1, 3)
             img.source = f"{number}.png"
@@ -68,13 +75,23 @@ class SlotGame(BoxLayout):
             self.credit += 100
             self.money_label.text = f"Money: {self.credit} (WIN!)"
             self.money_label.color = (0, 1, 0, 1) 
+            self.status_label.text = "Status: JACKPOT!!"
         else:
             self.credit -= 10
             self.money_label.text = f"Money: {self.credit}"
             self.money_label.color = (1, 1, 1, 1)
+            self.status_label.text = "Status: Try Again"
+
+
     def add_money(self, instance):
         self.credit += 1000
         self.money_label.text = f"Money: {self.credit}"
+        self.status_label.text = "Status: Money Added!"
+
+
+    def exit_game(self, instance):
+        App.get_running_app().stop()
+
 class SlotApp(App):
     def build(self):
         return SlotGame()
