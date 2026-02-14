@@ -17,8 +17,15 @@ A classic 3x3 Slot Machine game with betting system and cheat codes.
 * **Framework:** Kivy
 
 ## 🎮 How to Play
-1.  Press **SPIN!** to start the game.
-2.  Match **3 images** in the middle row to **WIN!** (+100 credits).
-3.  If you run out of money, press **+1000** (Cheat Button).
-4.  Press **RESET** to restart the game with 1000 credits.
-5.  Press **EXIT** to close the game.
+1. **Spin**: Press the RED button to spin the slots.
+2. **Win**: Match 3 symbols in the middle row to win Jackpot (+100).
+3. **Loss**: If symbols don't match, you lose credit (-10).
+4. **Reset**: Press 'Reset' to restart the game with 1000 credits.
+
+## 🛠 Features (Widget & Callback Count)
+- **Widgets (>30):** Grid 3x3, Status Labels, Control Buttons, Header Decorations.
+- **Callbacks (>10):** Spin logic, Check win, Add credit, Reset game, Exit app.
+
+## 🚀 How to Run
+1. Install Kivy: `pip install kivy`
+2. Run the main file: `python main.py`
