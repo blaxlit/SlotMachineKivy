@@ -65,7 +65,9 @@ class SlotGame(BoxLayout):
             self.credit -= 10
             self.money_label.text = f"Money: {self.credit}"
             self.money_label.color = (1, 1, 1, 1)
-
+    def add_money(self, instance):
+        self.credit += 1000
+        self.money_label.text = f"Money: {self.credit}"
 class SlotApp(App):
     def build(self):
         return SlotGame()
