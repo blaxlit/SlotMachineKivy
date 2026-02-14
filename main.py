@@ -43,6 +43,8 @@ class SlotGame(BoxLayout):
         
         self.reset_btn = Button(text="RESET")
         button_box.add_widget(self.reset_btn)
+        self.status_label = Label(text="Status: Ready", font_size=20)
+        self.add_widget(self.status_label)
         
     def spin(self, instance):
         print("Spinning...")
