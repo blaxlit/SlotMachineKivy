@@ -40,11 +40,16 @@ class SlotGame(BoxLayout):
         self.cheat_btn = Button(text="+1000", background_color=(0, 1, 0, 1))
         button_box.add_widget(self.cheat_btn)
         self.cheat_btn.bind(on_press=self.add_money)
+        def exit_game(self, instance):
+            App.get_running_app().stop()
         
         self.reset_btn = Button(text="RESET")
         button_box.add_widget(self.reset_btn)
         self.status_label = Label(text="Status: Ready", font_size=20)
         self.add_widget(self.status_label)
+        self.exit_btn = Button(text="EXIT", background_color=(0.5, 0.5, 0.5, 1))
+        button_box.add_widget(self.exit_btn)
+        self.exit_btn.bind(on_press=self.exit_game)
         
     def spin(self, instance):
         print("Spinning...")
