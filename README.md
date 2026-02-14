@@ -9,3 +9,8 @@ This is a Kivy application assignment project.
 ## Tools
 - Language: Python 3
 - Framework: Kivy
+## How to Play
+1. Press **SPIN!** to start the game.
+2. Match 3 images to WIN!
+3. If you run out of money, press **+1000**.
+4. Press **EXIT** to close the game.
