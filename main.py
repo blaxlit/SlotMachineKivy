@@ -37,7 +37,9 @@ class SlotGame(BoxLayout):
         button_box.add_widget(self.spin_btn)
         self.cheat_btn.bind(on_press=self.add_money)
 
-        self.spin_btn.bind(on_press=self.spin)
+        self.cheat_btn = Button(text="+1000", background_color=(0, 1, 0, 1))
+        button_box.add_widget(self.cheat_btn)
+        self.cheat_btn.bind(on_press=self.add_money)
         
         self.reset_btn = Button(text="RESET")
         button_box.add_widget(self.reset_btn)
